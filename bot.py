@@ -4,7 +4,7 @@ import subprocess
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 
 # Read secrets from secrets.toml
-with open("secrets.toml", "r") as f:
+with open(".streamlit/secrets.toml", "r") as f:
     secrets = toml.load(f)
 
 BOT_TOKEN = secrets["BOT_TOKEN"]
